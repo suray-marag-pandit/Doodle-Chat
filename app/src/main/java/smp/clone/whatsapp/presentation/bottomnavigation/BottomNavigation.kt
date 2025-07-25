@@ -23,11 +23,12 @@ import smp.clone.whatsapp.R
 
 
 @SuppressLint("SuspiciousIndentation")
-@Preview(showSystemUi = true)
 @Composable
-fun BottomNavigation(){
+fun BottomNavigation(
+    selectedItem:Int
+){
     // State to keep track of the selected item in the bottom navigation
-    var selectedItem by remember { mutableIntStateOf(0) } // 0 for Chats, 1 for Updates, etc.
+    var selectedItem by remember { mutableIntStateOf(selectedItem) } // 0 for Chats, 1 for Updates, etc.
 
     val items = listOf("Chats", "Updates", "Communities", "Calls")
     val icons = listOf(

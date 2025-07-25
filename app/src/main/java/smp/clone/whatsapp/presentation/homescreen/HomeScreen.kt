@@ -28,6 +28,7 @@ import smp.clone.whatsapp.R
 import smp.clone.whatsapp.presentation.bottomnavigation.BottomNavigation
 import smp.clone.whatsapp.presentation.homescreen.components.ChatListModel
 import smp.clone.whatsapp.presentation.homescreen.components.ReactionMessageBubble
+import smp.clone.whatsapp.presentation.topappbar.TopAppBar
 
 
 @OptIn(ExperimentalMaterial3Api::class) // Opt-in for experimental Material 3 APIs like TopAppBar
@@ -152,45 +153,7 @@ fun HomeScreen() {
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = "Doodle",
-                        fontSize = 28.sp,
-                        color = colorResource(R.color.orangeboldtheme) // App name in white
-                    )
-                },
-                actions = {
-                    // Camera Icon
-                    IconButton(onClick = { /* TODO: Handle camera click */ }) {
-                        Icon(
-                            painter = painterResource(R.drawable.baseline_camera_alt_24), // Corrected: Using Camera icon for broader compatibility
-                            contentDescription = "Camera",
-                            tint = colorResource(R.color.white)
-                            // Icon in white
-                        )
-                    }
-                    // Search Icon
-                    IconButton(onClick = { /* TODO: Handle search click */ }) {
-                        Icon(
-                            imageVector = Icons.Default.Search, // Search icon
-                            contentDescription = "Search",
-                            tint = colorResource(R.color.white) // Icon in white
-                        )
-                    }
-                    // 3-dot Menu Icon
-                    IconButton(onClick = { /* TODO: Handle menu click */ }) {
-                        Icon(
-                            imageVector = Icons.Default.MoreVert, // 3-dot menu icon
-                            contentDescription = "More options",
-                            tint = colorResource(R.color.white) // Icon in white
-                        )
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = colorResource(R.color.black) // Background color of the top app bar
-                )
-            )
+           TopAppBar("Doodle")
         },
         floatingActionButton = {
             FloatingActionButton(
@@ -206,7 +169,7 @@ fun HomeScreen() {
                 )
             }
         },
-        bottomBar = { BottomNavigation() }
+        bottomBar = { BottomNavigation(0) }
     ) { paddingValues -> // Add paddingValues to the Scaffold content
         LazyColumn(
             modifier = Modifier
