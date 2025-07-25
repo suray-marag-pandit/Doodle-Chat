@@ -46,13 +46,13 @@ fun ReactionMessageBubble(chatdesignmodel: ChatListModel) {
             painter = painterResource(id = senderImageResId),
             contentDescription = "Profile picture of ${chatdesignmodel.senderId}",
             modifier = Modifier
-                .size(36.dp) // Slightly smaller avatar
+                .size(50.dp) // Slightly smaller avatar
                 .clip(CircleShape)
                 .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.1f)), // Subtle background
             contentScale = ContentScale.Crop
         )
 
-        Spacer(modifier = Modifier.width(12.dp)) // Space between image and text bubble
+        Spacer(modifier = Modifier.width(18.dp)) // Space between image and text bubble
 
         // Reaction Text and Time Bubble
         // This Column acts as the dark background bubble
@@ -61,9 +61,9 @@ fun ReactionMessageBubble(chatdesignmodel: ChatListModel) {
                 .weight(1f) // Takes available width
                 .background(
                     color = Color(0xFF3C3C3C), // A darker grey for the bubble background
-                    shape = RoundedCornerShape(10.dp) // Rounded corners for the bubble
+                    shape = RoundedCornerShape(16.dp) // Rounded corners for the bubble
                 )
-                .padding(horizontal = 12.dp, vertical = 8.dp) // Padding inside the bubble
+                .padding(horizontal = 16.dp, vertical = 12.dp) // Padding inside the bubble
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -75,25 +75,25 @@ fun ReactionMessageBubble(chatdesignmodel: ChatListModel) {
                     text = chatdesignmodel.senderId,
                     color = Color.White.copy(alpha = 0.9f), // Slightly brighter white for name
                     fontWeight = FontWeight.SemiBold, // Semi-bold for name
-                    fontSize = 13.sp, // Smaller font for name
+                    fontSize = 16.sp, // Smaller font for name
                     modifier = Modifier.weight(1f) // Allow name to take space
                 )
                 // Time
                 Text(
                     text = chatdesignmodel.time,
                     color = Color.White.copy(alpha = 0.5f), // Subtler white for time
-                    fontSize = 10.sp, // Small font for time
+                    fontSize = 12.sp, // Small font for time
                     fontWeight = FontWeight.Normal
                 )
             }
-            Spacer(modifier = Modifier.height(4.dp)) // Space between name/time and message text
+            Spacer(modifier = Modifier.height(8.dp)) // Space between name/time and message text
             // Reaction Message Text
             Text(
                 text = chatdesignmodel.text,
                 color = Color.White, // Pure white for message text
-                fontSize = 15.sp, // Standard font size for message
+                fontSize = 18.sp, // Standard font size for message
                 fontWeight = FontWeight.Normal,
-                lineHeight = 18.sp // Adjust line height for better readability
+                lineHeight = 22.sp // Adjust line height for better readability
             )
         }
     }

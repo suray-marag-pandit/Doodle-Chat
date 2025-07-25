@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Whatsapp"
+rootProject.name = "Doodle"
 include(":app")

@@ -25,6 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import smp.clone.whatsapp.R
+import smp.clone.whatsapp.presentation.bottomnavigation.BottomNavigation
 import smp.clone.whatsapp.presentation.homescreen.components.ChatListModel
 import smp.clone.whatsapp.presentation.homescreen.components.ReactionMessageBubble
 
@@ -204,7 +205,8 @@ fun HomeScreen() {
                     modifier = Modifier.size(30.dp)
                 )
             }
-        }
+        },
+        bottomBar = { BottomNavigation() }
     ) { paddingValues -> // Add paddingValues to the Scaffold content
         LazyColumn(
             modifier = Modifier
