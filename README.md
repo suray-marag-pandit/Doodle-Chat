@@ -1,6 +1,5 @@
 # Doodle Chat App
 
-<img width="362" height="767" alt="image" src="https://github.com/user-attachments/assets/f111be3f-80b7-42ce-81e3-5859cb700137" />
-![img.png](img.png)
-![img_1.png](img_1.png)
+<img width="362" height="767" alt="image" src="https://github.com/user-attachments/assets/f111be3f-80b7-42ce-81e3-5859cb700137" /><img width="373" height="786" alt="image" src="https://github.com/user-attachments/assets/5f435f66-f0a5-4ed0-9301-6eb0d76a9fa1" /><img width="389" height="838" alt="image" src="https://github.com/user-attachments/assets/601be877-5d4b-464b-a0f1-27c1de9e1bda" />
+
 implemented splash , welcome and user registration screen 
