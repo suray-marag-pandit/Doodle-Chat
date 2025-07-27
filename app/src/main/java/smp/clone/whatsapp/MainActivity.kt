@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import smp.clone.whatsapp.presentation.callscreen.CallsScreen
+import smp.clone.whatsapp.presentation.communitiesscreen.CommunitiesScreen
+import smp.clone.whatsapp.presentation.homescreen.HomeScreen
 import smp.clone.whatsapp.presentation.updatescreen.UpdatesScreen
 import smp.clone.whatsapp.ui.theme.WhatsappTheme
 
@@ -13,7 +16,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WhatsappTheme {
-                UpdatesScreen()
+                CallsScreen()
             }
         }
     }

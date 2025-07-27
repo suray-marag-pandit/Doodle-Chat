@@ -19,17 +19,13 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Create
-import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -46,6 +42,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import smp.clone.whatsapp.R
 import smp.clone.whatsapp.presentation.bottomnavigation.BottomNavigation
+import smp.clone.whatsapp.presentation.components.GenericTopAppBar
+
 
 // Enum to define the status of an update (for the ring effect)
 enum class UpdateStatus {
@@ -80,26 +78,12 @@ fun UpdatesScreen() {
     Scaffold(
         containerColor = colorResource(R.color.black),
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = "Updates",
-                        color = colorResource(R.color.orangeboldtheme),
-                        fontWeight = FontWeight.Bold
-                    )
-                },
-                actions = {
-                    IconButton(onClick = { /* TODO: Handle settings/privacy click */ }) {
-                        Icon(
-                            imageVector = Icons.Default.MoreVert, // Or Icons.Default.Settings
-                            contentDescription = "More options",
-                            tint = colorResource(R.color.white)
-                        )
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = colorResource(R.color.black)
-                )
+            GenericTopAppBar(
+                title = "Updates",
+                onCameraClicked = {},
+                onSearchClicked = {},
+                menuItems = listOf("Status privacy", "Create Channel", "Settings"),
+                onMenuItemClicked = { item -> println("Clicked: $item") }
             )
         },
         bottomBar = { BottomNavigation(1) },
