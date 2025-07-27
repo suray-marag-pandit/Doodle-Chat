@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="smp.clone.whatsapp" />
+                  <option name="mobileSdkAppId" value="1:37383301796:android:eebec336109c35758a1431" />
+                  <option name="projectId" value="smpdoodleproject" />
+                  <option name="projectNumber" value="37383301796" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
