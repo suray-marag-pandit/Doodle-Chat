@@ -21,6 +21,7 @@ import smp.clone.doodle.presentation.bottomnavigation.BottomNavigation
 import smp.clone.doodle.presentation.components.GenericTopAppBar
 import smp.clone.doodle.presentation.homescreen.components.ChatListModel
 import smp.clone.doodle.presentation.homescreen.components.ReactionMessageBubble
+import smp.clone.whatsapp.R
 
 
 @OptIn(ExperimentalMaterial3Api::class) // Opt-in for experimental Material 3 APIs like TopAppBar
