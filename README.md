@@ -1,4 +1,4 @@
-# Doodle Chat App
+# Doodle Chat 
 
 <img width="362" height="767" alt="image" src="https://github.com/user-attachments/assets/f111be3f-80b7-42ce-81e3-5859cb700137" />
 <img width="373" height="786" alt="image" src="https://github.com/user-attachments/assets/5f435f66-f0a5-4ed0-9301-6eb0d76a9fa1" />
